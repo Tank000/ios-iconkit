@@ -6,7 +6,7 @@ An library that help you to build app with vector icon (font icon,like FontAweso
 ### About
 **With ```iconkit```you`ll never need to copy different size images (@2x,@3x) for each icon you want to use in your app. you can also change their color or size easily.The code use Font-Awesome for showing.**
 ----
-You can create other icon fonts by [icomoon](https://icomoon.io)**
+**You can create other icon fonts by [icomoon](https://icomoon.io)**
 ----
 **using icon font (like fontawesome.ttf) 400+ icons only ```112KB``` with all kind of color and size。[All Font-Awesom available icons](http://fortawesome.github.io/Font-Awesome/icons)**
 
