@@ -8,13 +8,15 @@ An library that help you to build app with vector icon (font icon,like FontAweso
 
 **You can create other icon fonts by [icomoon](https://icomoon.io)**
 
-**using icon font (like fontawesome.ttf) 400+ icons only ```112KB``` with all kind of color and size。[All Font-Awesom available icons](http://fortawesome.github.io/Font-Awesome/icons)**
+**icon font (like fontawesome.ttf) 400+ icons only ```112KB``` with all kind of color and size。[All Font-Awesom available icons](http://fortawesome.github.io/Font-Awesome/icons)**
 
 
 ### How to Use
-Setp 1. Copy ```Icon.h``` ```Icon.m``` ```UILabel+Iconkit.h``` ```UILabel+Iconkit.m```  ```IconImageView.h``` ```IconImageView.m``` and your icon font file ,like ```fontawesome.ttf ``` to your project.
-Setp 2. Edit your Info.plist ,addRow— ```Fonts provided by application``` item value is ```fontawesome.ttf ```
-Setp 3. Find an icon in ```Icon.h``` and use icon like normal string.
+*  Setp 1. Copy ```Icon.h``` ```Icon.m``` ```UILabel+Iconkit.h``` ```UILabel+Iconkit.m```  ```IconImageView.h``` ```IconImageView.m``` and your icon font file ,like ```fontawesome.ttf ``` to your project.
+*  Setp 2. Edit your Info.plist ,addRow— ```Fonts provided by application``` item value is ```fontawesome.ttf ```
+*  Setp 3. Find an icon in ```Icon.h``` and use icon like normal string.
+
+> or use ```NSString```
 
 ```
 UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, 40, 40)];
@@ -47,9 +49,12 @@ To modify the color, hack the code!
 
 ### How to create your own icon font
 
-**first,you should some svg icons.Then,open the website [icomoon](https://icomoon.io)**
-**soon,you will find so much icon more than you want!**
-**Note:Be careful with the license of the icon font**
+**first, you should some svg icons.**
+**Then, open the website [icomoon](https://icomoon.io)**
+**soon, you will find so much icon more than you want!**
+----
+**Note: Be careful with the license of the icon font**
+----
 
 ## License
 
