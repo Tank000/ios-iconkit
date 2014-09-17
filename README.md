@@ -52,7 +52,7 @@ To modify the color, hack the code!
 **first, you should some svg icons.**
 **Then, open the website [icomoon](https://icomoon.io)**
 **soon, you will find so much icon more than you want!**
-----
+
 **Note: Be careful with the license of the icon font**
 ----
 
