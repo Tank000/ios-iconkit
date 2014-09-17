@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>Ios-iconkit by Tank000</title>
+    <title>Ios-iconkit by Tank</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>Ios-iconkit</h1>
+        <h1>ios-iconkit</h1>
         <h2>An library that help you to build app with vector icon ( font icon , like FontAwesome, IcoMoon ) .</h2>
         <a href="https://github.com/Tank000/ios-iconkit" class="button"><small>View project on</small>GitHub</a>
       </div>
@@ -29,36 +29,102 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>About.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p><strong>With <code>iconkit</code>you`ll never need to copy different size images (@2x,@3x) for each icon you want to use in your app. you can also change their color or size easily.The code use Font-Awesome for showing.</strong></p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<p><strong>You can create other icon fonts by <a href="https://icomoon.io">icomoon</a></strong></p>
+
+<p><strong>icon font (like fontawesome.ttf) 400+ icons only <code>112KB</code> with all kind of color and size。<a href="http://fortawesome.github.io/Font-Awesome/icons">All Font-Awesom available icons</a></strong></p>
+
+<h3>
+<a name="user-content-how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Use</h3>
+
+<ul class="task-list">
+<li> Setp 1. Copy <code>Icon.h</code> <code>Icon.m</code> <code>UILabel+Iconkit.h</code> <code>UILabel+Iconkit.m</code>  <code>IconImageView.h</code> <code>IconImageView.m</code> and your icon font file ,like <code>fontawesome.ttf</code> to your project.</li>
+<li> Setp 2. Edit your Info.plist ,addRow— <code>Fonts provided by application</code> item value is <code>fontawesome.ttf</code>
+</li>
+<li> Setp 3. Find an icon in <code>Icon.h</code> and use icon like normal string.</li>
+</ul><blockquote>
+<p>or use <code>NSString</code></p>
+</blockquote>
+
+<pre><code>UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 20, 40, 40)];
+label.textColor = [UIColor blackColor];
+label.center = img.center;
+label.textAlignment = NSTextAlignmentCenter;
+[label setIcon:fa_github];
+[self.view addSubview:label];
+
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<blockquote>
+<p>or use <code>IconImageView</code></p>
+</blockquote>
+
+<pre><code>IconImageView *img = [[IconImageView alloc]initWithFrame:CGRectMake(0, 0, 160, 160)];
+[img setPadding:4];
+[img setIcon:fa_apple];
+[img setColor:0xececec withAlpha:1.0f];
+[img setNeedsDisplay];//manual redraw
+[self.view addSubview:img];
+</code></pre>
+
+<blockquote>
+<p>or create <code>UIImage</code> for <code>UIImageView</code></p>
+</blockquote>
+
+<pre><code>UIImageView *imgview = [[UIImageView alloc]initWithFrame:CGRectMake(0, 160, 80, 80)];
+imgview.image = [Icon getIcon:fa_home withSize:80];
+[self.view addSubview:imgview];
+</code></pre>
+
+<p>To modify the color, hack the code!</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="user-content-how-to-create-your-own-icon-font" class="anchor" href="#how-to-create-your-own-icon-font" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to create your own icon font</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p><strong>first, you should some svg icons.</strong>
+<strong>Then, open the website <a href="https://icomoon.io">icomoon</a></strong>
+<strong>soon, you will find so much icon more than you want!</strong></p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<h2>
+<a name="user-content-note-be-careful-with-the-license-of-the-icon-font" class="anchor" href="#note-be-careful-with-the-license-of-the-icon-font" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Note: Be careful with the license of the icon font</strong>
+</h2>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h2>
+<a name="user-content-license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<pre><code>Copyright 2014 tank
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+It uses FontAwesome font by Dave Gandy, licensed under OFL 1.1, which is compatible
+with this library's license.
+
+    http://scripts.sil.org/cms/scripts/render_download.php?format=file&amp;media_id=OFL_plaintext&amp;filename=OFL.txt
+
+</code></pre>
 
 <h3>
 <a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>You can <a href="weibo.com/tyt00" class="user-mention">@tankfullstack</a> on weibo or <a href="taguage.com/tango" class="user-mention">@tango</a>on Taguage</p>
 
 <h3>
 <a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Having trouble with iconkit? Check out the documentation at <a href="https://github.com/Tank000/ios-iconkit">https://github.com/Tank000/ios-iconkit</a> or contact <a href="mailto:tank.tyt@gmail.com">tank.tyt@gmail.com</a> and we’ll help you sort it out.</p>
         </section>
 
         <aside id="sidebar">
@@ -72,8 +138,6 @@ $ git checkout gh-pages
           </a>
 
           <p class="repo-owner"><a href="https://github.com/Tank000/ios-iconkit"></a> is maintained by <a href="https://github.com/Tank000">Tank000</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>
       </div>
     </div>
